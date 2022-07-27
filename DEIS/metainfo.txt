@@ -6,7 +6,7 @@ Description: 'A DEIS algorithm (TD learning incorporated with importance samplin
 
 Keywords: 'DEIS, policy control, rewards, rare disasters'
 
-Author: 'Jiawen Liang'
+Author: 'Jiawen Liang, Cathy Chen, Bowei Chen'
 
 Submitted:  '27. 07. 2022'
 
