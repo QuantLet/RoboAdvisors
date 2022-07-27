@@ -107,7 +107,7 @@ def train_DEIS(max_episodes, model):
 
 
 if __name__ == '__main__':
-    path = "/Users/liangjiawen/PycharmProjects/TDlearning/preprocessor/covid_data_new.csv"
+    path = "covid_data_new.csv"
     df = pd.read_csv(path)
 
     # investor type: general
@@ -140,36 +140,3 @@ if __name__ == '__main__':
     v_S = train_DEIS(2000, model_Sarsa)
     v_S.to_pickle('covid_DEIS_S_v.pkl')
 
-
-    #
-    # v_IS = pd.read_pickle("crisis_DEIS_IS_v.pkl")
-    # v_S = pd.read_pickle("crisis_DEIS_S_v.pkl")
-    #
-    #
-    # def get_value(df):
-    #     episode_values = []
-    #     for episode in range(2000):
-    #         episode = df[df['episode'] == episode]
-    #         state_0 = episode.iloc[[0]]
-    #         value = state_0['state_value']
-    #         episode_values.append(value)
-    #         # mean = episode['state_value'].mean()
-    #         # episode_values.append(mean)
-    #     return episode_values
-    # #
-    # #
-    # IS = get_value(v_IS)
-    # Sarsa = get_value(v_S)
-    #
-    # plt.figure()
-    # plt.plot(np.arange(len(IS)), IS, label="\u03C0*", color="red", linewidth=0.5)
-    # plt.plot(np.arange(len(Sarsa)), Sarsa, label="\u03C0", color="grey", linewidth=0.5)
-    # # plt.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
-    # plt.legend()
-    # plt.title("TD Value estimate for policy evaluation")
-    # plt.xlabel("episodes")
-    # plt.ylabel("value estimate")
-    # # plt.savefig("./value_estimate_covid.jpg")
-    # plt.show()
-    #
-    #
