@@ -4,7 +4,7 @@ Published in: 'RoboAdvisors'
 
 Description: 'A novel SARSA-IS algorithm to optimize the policy in the presence of rare disasters'
 
-Keywords: 'SARSA, importance sampling, policy control, rewards, disaster proability'
+Keywords: 'SARSA, importance sampling, policy control, rewards, disaster probaility, rare disasters'
 
 Author: 'Jiawen Liang'
 
