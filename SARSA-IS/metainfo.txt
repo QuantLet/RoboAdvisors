@@ -6,7 +6,7 @@ Description: 'A novel SARSA-IS algorithm to optimize the policy in the presence 
 
 Keywords: 'SARSA, importance sampling, policy control, rewards, disaster probaility, rare disasters'
 
-Author: 'Jiawen Liang'
+Author: 'Jiawen Liang, Cathy Chen, Bowei Chen'
 
 Submitted:  '27. 07. 2022'
 
