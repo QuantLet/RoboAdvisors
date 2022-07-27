@@ -6,7 +6,7 @@ Description: 'A conventional SARSA algorithm to optimize the policy in an epsilo
 
 Keywords: 'SARSA, policy control, rewards'
 
-Author: 'Jiawen Liang'
+Author: 'Jiawen Liang, Cathy Chen, Bowei Chen'
 
 Submitted:  '27. 07. 2022'
 
