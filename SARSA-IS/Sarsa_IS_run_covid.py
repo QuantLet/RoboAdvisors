@@ -113,8 +113,8 @@ def train_REASA(max_episodes):
 
 
 if __name__ == '__main__':
-    path = "/Users/liangjiawen/PycharmProjects/TDlearning/preprocessor/covid_data.csv"
-    # path = "/Users/liangjiawen/PycharmProjects/TDlearning/preprocessor/financial_crisis_data.csv"
+    path = "covid_data.csv"
+    # path = "financial_crisis_data.csv"
     df = pd.read_csv(path)
 
     # investor type: general
@@ -141,61 +141,3 @@ if __name__ == '__main__':
     reward_df.to_pickle('Sarsa_IS_rewards_covid.pkl')
     q_df.to_pickle('Sarsa_IS_q_covid.pkl')
     np.save('Sarsa_IS_hat_p_covid.npy', hat_p_list)
-
-    #
-    #
-    # hat_p_IS_list = np.load('Sarsa_IS_hat_p_covid.npy', allow_pickle=True)
-    # reward_df = pd.read_pickle('Sarsa_IS_rewards_covid.pkl')
-    # policy_df = pd.read_pickle('Sarsa_IS_policy_covid.pkl')
-    #
-    # # D_sampling_parameter = hat_p_df[s_disaster]#[:65000]
-    # IS_sampling_parameter = hat_p_IS_list
-    # plt.figure()
-    # plt.plot(np.arange(len(IS_sampling_parameter)), IS_sampling_parameter, label="SARSA-IS", color="red", linewidth=0.5)
-    # # plt.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
-    # y_major_locator = MultipleLocator(0.1)
-    # ax = plt.gca()
-    # ax.yaxis.set_major_locator(y_major_locator)
-    # plt.legend()
-    # plt.title("Sampling parameter (\u03B5\u0302)")
-    # plt.xlabel("Episodes")
-    # plt.ylabel("\u03B5\u0302")
-    # # plt.savefig("Sampling_parameter_IS_covid.jpg")
-    # plt.show()
-    #
-    #
-    #
-    # def get_reward(df):
-    #     rewards = []
-    #     for episode in range(500):
-    #         every_episode = df[df['episode'] == episode]
-    #         # state_0 = every_episode.iloc[[0]]
-    #         # print(state_0)
-    #         # value = state_0['rewards']
-    #         value = every_episode['rewards'].mean() * 12
-    #         rewards.append(value)
-    #     return rewards  # list
-    # episode_rewards = get_reward(reward_df)
-    #
-    # plt.figure()
-    # plt.plot(np.arange(len(episode_rewards)), episode_rewards, label="Sarsa-IS", color="red", linewidth=0.5)
-    # plt.legend()
-    # plt.title("reward estimate")
-    # plt.xlabel("episode")
-    # plt.ylabel("reward estimate")
-    # # plt.savefig("./episode_rewards_IS_covid.jpg")
-    # plt.show()
-    #
-    # # policy
-    # crisis_s_D = str(np.array([-0.03, 0.06, 0.00031]))
-    # Covid_s_D = str(np.array([-0.0275, 0.1352, 0.0001]))
-    #
-    # #
-    # # print('crisis_IS_policy_df', policy_df[18670:18750])
-    # # crisis_IS_disaster_df = policy_df[policy_df["state"] == crisis_s_D]
-    # # print('crisis_SARSA-IS disaster policy', crisis_IS_disaster_df)
-    #
-    # print('covid_IS_policy_df', policy_df[14950:15000])
-    # covid_IS_disaster_df = policy_df[policy_df["state"] == Covid_s_D]
-    # covid_IS_disaster_df = covid_IS_disaster_df[covid_IS_disaster_df['episode'] == 200]
-    # print('covid_SARSA-IS disaster policy', covid_IS_disaster_df)

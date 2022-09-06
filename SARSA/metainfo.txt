@@ -1,0 +1,12 @@
+Name of Quantlet: 'SARSA'
+
+Published in: 'RoboAdvisors'
+
+Description: 'A conventional SARSA algorithm to optimize the policy in an epsilon-greedy way'
+
+Keywords: 'SARSA, policy control, rewards'
+
+Author: 'Jiawen Liang, Cathy Chen, Bowei Chen'
+
+Submitted:  '27. 07. 2022'
+
